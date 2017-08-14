@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 顶部 包含 视频名称和 电量 系统时间 -->
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="#e01d1e1a"
+        android:orientation="horizontal" >
+
+        <!-- 视频名称 -->
+
+        <TextView
+            android:id="@+id/tv_move_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="3dp"
+            android:text="视频名称"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+        <!-- 电量 -->
+		<FrameLayout 
+		    android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    >
+		     <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/better" 
+            />
+		     <TextView 
+		         android:id="@+id/tv_battery"
+		         android:layout_gravity="center_horizontal"
+		          android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="11sp"
+            android:layout_marginTop="3dp"
+		         />
+		</FrameLayout>
+       
+        <!-- 系统时间 -->
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="12:00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <!-- 音量控制布局 -->
+
+    <LinearLayout
+        android:id="@+id/center"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/top"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="#e0000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 音量 -->
+		<LinearLayout 
+		    android:layout_marginLeft="5dp"
+		      android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+		    >
+		    <ImageButton
+		        android:id="@+id/iv_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e0000000"
+            android:clickable="true"
+            android:src="@drawable/voice_selector" />
+		</LinearLayout>
+        
+
+        <SeekBar
+            android:id="@+id/seekbar_voice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:progress="30" />
+        <!-- 切换播放器 -->
+
+        <ImageButton
+            android:id="@+id/ib_player_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+             android:background="#e0000000"
+            android:clickable="true"
+            android:src="@drawable/change" />
+    </LinearLayout>
+    <!-- 底部布局 -->
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical" >
+
+        <!-- 视频播放进度布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#e0000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 视频播放的时间 -->
+
+            <TextView
+                android:id="@+id/tv_currenttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="02:00"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+            <!-- 视频播放的进度 -->
+
+            <SeekBar
+                android:id="@+id/player_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:maxHeight="5dp"
+                android:minHeight="5dp"
+                android:progress="10" />
+            <!-- 视频总时长 -->
+
+            <TextView
+                android:id="@+id/tv_toaltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="05:30"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <!-- 视频播放控制 -->
+
+        <LinearLayout
+            
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#1d1e1a"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!--  -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" >
+				
+                <ImageButton
+                    android:id="@+id/iv_last"
+                     android:background="#e01d1e1a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/last" />
+            </LinearLayout>
+
+            <!--  -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" >
+
+                <ImageButton
+                    android:id="@+id/iv_startcontrol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#e01d1e1a"
+                    android:src="@drawable/pruse_selector" />
+            </LinearLayout>
+
+            <!--  -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ib_next"
+                    android:background="#e01d1e1a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/next" />
+            </LinearLayout>
+            <!-- 全屏切换 -->
+			   <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal" >
+            <ImageButton
+                android:id="@+id/ib_full_screen"
+                android:background="#e01d1e1a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fullscreen" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

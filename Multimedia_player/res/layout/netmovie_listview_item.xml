@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ffffff"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+    <RelativeLayout 
+        android:id="@+id/rl_image"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        >
+    <com.android.volley.toolbox.NetworkImageView  
+        android:id="@+id/iv_movie_coverImg"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@drawable/movie_model"
+         android:scaleType="fitXY"
+        />
+        <ImageView 
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/net_movie_start"
+            android:scaleType="fitXY"
+            android:clickable="true"
+            />
+        
+        
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/ll_layout_item"
+        android:layout_toRightOf="@id/rl_image"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+     	android:gravity="center_vertical"
+     	android:paddingLeft="5dp"
+        
+        >
+        <TextView 
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_moviename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频名称"
+            android:textSize="15sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="#000000"
+            />
+          <TextView 
+            android:id="@+id/tv_moviesummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="summary"
+            android:textSize="12sp"
+            android:paddingLeft="3dp"
+            android:textColor="#e01d1e1a"
+             android:paddingTop="10dp"
+            />
+    </LinearLayout>
+
+      <TextView
+          android:id="@+id/tv_movielength"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/ll_layout_item"
+          android:layout_alignParentRight="true"
+          android:paddingTop="10dp"
+          android:text="4:05"
+          android:paddingRight="5dp"
+          android:paddingBottom="5dp"
+          android:textColor="#000000"
+          android:textSize="12sp" />
+
+</RelativeLayout>

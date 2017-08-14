@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="@android:color/white">
+ 
+    <LinearLayout 
+        android:paddingTop="10dp"
+        android:id="@+id/ll_netmusicpage_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText 
+            android:id="@+id/et_search_context"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:hint="关键字搜索"
+            />
+       <Button 
+           android:id="@+id/btn_search"
+           android:layout_width="wrap_content"
+           android:layout_height="50dp"
+           android:text="搜索"
+           />
+    </LinearLayout>
+    <AbsoluteLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        >
+       <ImageView 
+           android:id="@+id/iv_pictop"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/top"
+        />
+
+       <TextView
+           android:gravity="center_horizontal"
+           android:id="@+id/tv_search_schedule"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_x="106dp"
+           android:layout_y="38dp"
+           android:text="正在搜索..."
+           android:textColor="@android:color/holo_green_light"
+           android:textSize="30sp" 
+          android:visibility="gone" />
+        
+    </AbsoluteLayout>
+    <ListView 
+        
+        android:id="@+id/lv_netmusicpage_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_netmusicpage_top"
+        android:paddingTop="20dp"
+        
+        
+        />
+</LinearLayout>

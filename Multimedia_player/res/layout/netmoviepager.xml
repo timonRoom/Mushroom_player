@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+     >
+	<TextView 
+	    android:id="@+id/tv_netmoview_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="影院热映"
+	    android:textColor="@android:color/holo_red_light"
+	    android:textSize="25sp"
+	    android:paddingTop="20dp"
+	    android:paddingBottom="20dp"
+	    android:gravity="center"
+	    />
+	<ProgressBar 
+	    android:id="@+id/pb_processbar"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	     android:layout_centerInParent="true"
+	    />
+        <TextView 
+            android:id="@+id/tv_loading"
+            android:layout_below="@id/pb_processbar"
+             android:layout_centerInParent="true"
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在加载..."
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+    <ListView 
+        android:layout_below="@id/tv_netmoview_title"
+        android:id="@+id/lv_netmovie_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ></ListView>
+ 
+</RelativeLayout>

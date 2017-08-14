@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ffffff"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+    <ImageView 
+        android:id="@+id/iv_movie_model"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/music_titel"
+        />
+    <LinearLayout 
+        android:id="@+id/ll_layout"
+        android:layout_toRightOf="@id/iv_movie_model"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+     	android:gravity="center_vertical"
+     	android:paddingLeft="10dp"
+        
+        >
+        <TextView 
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频名称"
+            android:textSize="15sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="#000000"
+            />
+          <TextView 
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20:00"
+            android:textSize="10sp"
+            android:textColor="#000000"
+             android:paddingTop="10dp"
+            />
+    </LinearLayout>
+
+      <TextView
+          android:id="@+id/tv_size"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/ll_layout"
+          android:layout_alignParentRight="true"
+          android:paddingTop="10dp"
+          android:text="25.6M"
+          android:paddingRight="5dp"
+          android:paddingBottom="5dp"
+          android:textColor="#000000"
+          android:textSize="10sp" />
+
+</RelativeLayout>
